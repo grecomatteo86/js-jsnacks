@@ -1,3 +1,8 @@
+/*In un array sono contenuti i nomi degli invitati alla festa del
+grande Inzaghi, chiedi all’utente il suo nome e comunicagli se
+può partecipare o no alla festa.
+*/
+
 // 1. scrivo un Array con i nomi degli invitati
 var listaInvitati = ['alessio','clelia','samuele','matteo'];
 console.log(listaInvitati);

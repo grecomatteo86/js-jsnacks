@@ -1,3 +1,8 @@
+/* L’utente inserisce due parole in successione, con due
+prompt. Il software stampa prima la parola più corta, poi la
+parola più lunga.
+*/
+
 // l'utente inserisce la prima parola
 var parola1 = prompt('inserisci la prima parola');
 console.log('la prima parola inserita è lunga ' + parola1.length + ' caratteri');

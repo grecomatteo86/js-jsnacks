@@ -1,3 +1,6 @@
+// L’utente inserisce due numeri in successione, con due prompt. Il software stampa il maggiore.
+
+
 // l'utente inserisce il primo numero
 var numero1 = parseInt(prompt('inserisci il primo numero'));
 console.log('l\'utente ha inserito come primo numero il ' + numero1);
