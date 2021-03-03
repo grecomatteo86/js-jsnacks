@@ -1,13 +1,7 @@
 /*
-Stampa il cubo dei primi N numeri, dove N è un numero indicato dall’utente
+Stampa le potenze di 2 fino al risultato 1000
 */
 
-
-// 1. chiedo all'utente di inserire un numero
-var numero = prompt('inserisci un numero');
-
-
-for (var i = 1; i <= numero; i++) {
-  Math.pow(i, 3);
-  console.log(Math.pow(i, 3));
+for ( i = 1; i < 1000; i = i * 2) {
+  console.log(i);
 }
