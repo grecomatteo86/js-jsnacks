@@ -5,27 +5,39 @@ fino a quando ne avrà tanti quanti l’altro.
 */
 
 //1. creo gli array con numero elementi diverso
-var array1 = ['sedia','tavolo','penna','bottiglia','computer'];
-console.log('il primo elenco contiene ' + array1.length + ' oggetti');
-console.log(array1);
+var array1 = [1,5,90,54,10,34,44,54,78];
+var array2 = [35,67,8];
 
-var array2 = ['orologio','cuffie','libro'];
-console.log('il secondo elenco contiene ' + array2.length + ' oggetti');
-console.log(array2);
+var majArray = [];
+var minArray = [];
 
-//2. confronto la length dei due array e aggiungo elemento fintantochè:
-if ( array1.length > array2.length) {
+//2. faccio un controllo per determinare l'array più lungo
 
-  do {
+if (array1.length != array2.length) {
 
-    var oggetto = prompt('inserisci un oggetto nell\'elenco che ha meno oggetti');
-    array2.push(oggetto);
-    console.log('l\'utente ha aggiunto l\'oggetto: ' + oggetto);
-    console.log('dopo l\'aggiunta dell\'utente, il secondo elenco è formato da: ' + array2);
+  if(array1.length > array2.length) {
 
-  } while (array1.length > array2.length);
+    majArray = array1;
+    minArray = array2;
 
+  } else {
 
+    majArray = array2;
+    minArray = array1;
+
+  }
+
+  //3. vado a fare il push nell'array piu corto
+  while ( minArray.length < majArray.length) {
+
+    var numeroRandom = Math.floor(Math.random() * 100) + 1;
+    minArray.push(numeroRandom);
+
+  }
+
+  //4. stampo il risultato
+  console.log(minArray.length,majArray.length);
+
+} else {
+  alert('gli array hanno la stessa lunghezza');
 }
-
-console.log('adesso il primo elenco contiene ' + array1.length + ' oggetti, mentre il secondo elenco contiene ' + array2.length + ' oggetti');
