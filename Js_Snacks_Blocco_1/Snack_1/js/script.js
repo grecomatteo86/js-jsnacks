@@ -1,20 +1,18 @@
-// L’utente inserisce due numeri in successione, con due prompt. Il software stampa il maggiore.
-
-
-// l'utente inserisce il primo numero
-var numero1 = parseInt(prompt('inserisci il primo numero'));
-console.log('l\'utente ha inserito come primo numero il ' + numero1);
-
-// l'utente inserisce il secondo numero
-var numero2 = parseInt(prompt('inserisci il secondo numero'));
-console.log('l\'utente ha inserito come secondo numero il ' + numero2);
-
-// stampo il maggiore
-if (numero1 > numero2) {
-  alert(numero1);
-} else if (numero2 > numero1) {
-  alert(numero2);
+var firstUserNumber = parseInt(prompt('enter the first number'));
+while(isNaN(firstUserNumber)){
+  firstUserNumber = parseInt(prompt('enter the first number'));
+}
+console.log('first user number is ' + firstUserNumber);
+var secondUserNumber = parseInt(prompt('enter the second number'));
+while(isNaN(secondUserNumber)){
+  secondUserNumber = parseInt(prompt('enter the second number'));
+}
+console.log('second user number is ' + secondUserNumber);
+if (firstUserNumber > secondUserNumber) {
+  alert(firstUserNumber + ' is the highest');
+} else if (secondUserNumber > firstUserNumber) {
+  alert(secondUserNumber + ' is the highest');
 }
 else {
-  alert('i numeri sono uguali');
+  alert(firstUserNumber + ' and ' + secondUserNumber + ' are equal');
 }
