@@ -1,23 +1,19 @@
-/* L’utente inserisce due parole in successione, con due
-prompt. Il software stampa prima la parola più corta, poi la
-parola più lunga.
-*/
-
-// l'utente inserisce la prima parola
-var parola1 = prompt('inserisci la prima parola');
-console.log('la prima parola inserita è lunga ' + parola1.length + ' caratteri');
-
-// l'utente inserisce la seconda parola
-var parola2 = prompt('inserisci la seconda parola');
-console.log('la seconda parola inserita è lunga ' + parola2.length + ' caratteri');
-
-// stampo la parola più corta e la più lunga
-if (parola1.length > parola2.length) {
-  alert('la parola più corta è ' + parola2);
-  alert('la parola più lunga è ' + parola1);
-} else if (parola1.length < parola2.length) {
-  alert('la parola più corta è ' + parola1);
-  alert('la parola più lunga è ' + parola2);
+var userFirstWord = prompt('enter your first word');
+while(!isNaN(userFirstWord)){
+  userFirstWord = prompt('enter your first word');
+}
+console.log('the first word you insert is ' + userFirstWord.length + ' characters');
+var userSecondWord = prompt('enter your second word');
+while(!isNaN(userSecondWord)){
+  userSecondWord = prompt('enter your second word');
+}
+console.log('the second word you insert is ' + userSecondWord.length + ' characters');
+if (userFirstWord.length > userSecondWord.length) {
+  alert('the shortest word is ' + userSecondWord);
+  alert('the longest word is ' + userFirstWord);
+} else if (userFirstWord.length < userSecondWord.length) {
+  alert('the shortest word is ' + userFirstWord);
+  alert('the longest word is ' + userSecondWord);
 } else {
-  alert('le due parole sono lunghe uguali');
+  alert('the two words are equal in length');
 }
