@@ -1,16 +1,13 @@
-/*Crea un array vuoto. Chiedi per 6 volte all’utente di inserire
-un numero, se è dispari inseriscilo nell’array.*/
-
-// creo un array vuoto
-var container = [];
-// chiedo all'utente di inserire per 6 volte un numero
+alert('now I ask you to insert six numbers')
+var oddNumbersArray = [];
 for ( var i = 1; i <=6; i++) {
-  var numero = parseInt(prompt('inserisci un numero'));
-  console.log(numero);
-  // se il numero è dispari lo inserisco nell'array
-  if(numero % 2 == 1){
-    container.push(numero);
+  var userNumber = parseInt(prompt('insert a number'));
+  while(isNaN(userNumber)){
+    userNumber = parseInt(prompt('insert a number'));
+  }
+  console.log(userNumber);
+  if(userNumber % 2 == 1){
+    oddNumbersArray.push(userNumber);
   }
 }
-// stampo l'array
-console.log(container);
+console.log(oddNumbersArray);
