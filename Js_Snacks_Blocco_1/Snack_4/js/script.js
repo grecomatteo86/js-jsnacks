@@ -1,29 +1,24 @@
-/*In un array sono contenuti i nomi degli invitati alla festa del
-grande Inzaghi, chiedi all’utente il suo nome e comunicagli se
-può partecipare o no alla festa.
-*/
-
-// 1. scrivo un Array con i nomi degli invitati
-var listaInvitati = ['alessio','clelia','samuele','matteo'];
-console.log(listaInvitati);
-
-//2. chiedo all’utente il suo nome
-var nomeUtente = prompt('scrivi il tuo nome');
-var risultato = 0;
-console.log('il nome inserito dall\'utente è ' + nomeUtente);
-
-//3. controlla che sia nella lista di chi può accedere
-for ( var i = 0 ; i < listaInvitati.length; i++ ){
-  console.log(listaInvitati[i]);
-  if (nomeUtente == listaInvitati[i]){
-    console.log('ok, l\'utente puoi accedere');
-    risultato = 1;
+var guestList = ['Alessio','Clelia','Samuele','Matteo'];
+console.log(guestList);
+var userName = prompt('write your name');
+while(!isNaN(userName)){
+  userName = prompt('write your name');
+}
+var userNameCapitalized = capitalizeFirstLetter(userName);
+var result = 0;
+console.log('user\'s name is ' + userNameCapitalized);
+for ( var i = 0 ; i < guestList.length; i++ ){
+  console.log(guestList[i]);
+  if (userNameCapitalized == guestList[i]){
+    result = 1;
   }
 }
-
-//4. stampa un messaggio appropriato sull’esito del controllo
-if (risultato == 1) {
-  alert('puoi accedere');
+if (result == 1) {
+  alert('access allowed');
 } else {
-  alert('non puoi accedere');
+  alert('access denied');
+}
+// Function - capitalizeFirstLetter
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
