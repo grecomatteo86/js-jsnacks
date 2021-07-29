@@ -1,16 +1,10 @@
-/*
-Inserisci un numero,
-se è pari stampa il numero,
-se è dispari stampa il numero successivo
-*/
-
-// 1. chiedo all'utente di inserire un numero
-var numero = parseInt(prompt('inserisci un numero'));
-console.log('l\'utente ha inserito il numero ' + numero);
-
-// 2. eseguo il controllo
-if ( numero % 2 == 0 ) {
-  console.log('l\'utente ha inserito un numero pari: ' + numero);
+var userNumber = parseInt(prompt('insert a number'));
+while(isNaN(userNumber)){
+  userNumber = parseInt(prompt('insert a number'));
+}
+console.log('user\'s number is ' + userNumber);
+if ( userNumber % 2 == 0 ) {
+  console.log('user\'s number is EVEN');
 } else {
-  console.log('l\'utente ha inserito un numero dispari: ' + ((numero) + 1 ));
+  console.log('user\'s number is ODD, so the final result is: ' + ((userNumber) + 1 ));
 }
