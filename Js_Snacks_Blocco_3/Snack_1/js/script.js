@@ -1,36 +1,22 @@
-/* Creare un array di oggetti:
-ogni oggetto descriverà una bici da corsa
-con le seguenti proprietà: nome e peso.
-Stampare a schermo la bici con peso minore */
-
-var arrayBici = [
+var bikesArray = [
   {
-    nome:'Girardengo',
-    peso:'3000'
+    name:'Girardengo',
+    weight:'3000'
   },
   {
-    nome:'Bianchi',
-    peso:'2000'
+    name:'Bianchi',
+    weight:'2000'
   },
   {
-    nome:'Atala',
-    peso:'2400'
+    name:'Atala',
+    weight:'2400'
   }
 ];
-
-var pesoRiferimento = arrayBici[0].peso;
-console.log(pesoRiferimento);
-
-for (var i = 0; i < arrayBici.length; i++) {
-
-
-
-  if (arrayBici[i].peso <  pesoRiferimento ) {
-
-    pesoRiferimento = arrayBici[i].peso;
-
+var referenceWeight = bikesArray[0].weight;
+console.log(referenceWeight);
+for (var i = 0; i < bikesArray.length; i++) {
+  if (bikesArray[i].weight <  referenceWeight ) {
+    referenceWeight = bikesArray[i].weight;
   }
-
 }
-
-console.log('La bici più leggera pesa ' + pesoRiferimento);
+console.log('the lightest bike weighs ' + referenceWeight);
