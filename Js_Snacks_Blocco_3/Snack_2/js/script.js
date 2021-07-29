@@ -1,65 +1,35 @@
-/* Creare un array di oggetti di squadre di calcio.
-Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
-Nome sarà l’unica proprietà da compilare,
-le altre saranno tutte settate a 0 */
-
-var arraySquadre = [
+var teamsArray = [
   {
-    nome:'Palermo',
-    puntiFatti:'0',
-    falliSubiti:'0'
+    name:'Palermo',
+    score:'0',
+    fauls:'0'
   },
   {
-    nome:'Catania',
-    puntiFatti:'0',
-    falliSubiti:'0'
+    name:'Catania',
+    score:'0',
+    fauls:'0'
   },
   {
-    nome:'Messina',
-    puntiFatti:'0',
-    falliSubiti:'0'
+    name:'Messina',
+    score:'0',
+    fauls:'0'
   }
 ];
-
-
-/* 2 step: generare numeri random al posto
-degli 0 nelle proprietà: Punti fatti e falli subiti */
-
-/* Creo una funzione per generare i numeri random */
-function randomizzatore (min, max) {
+for (var i = 0; i < teamsArray.length; i++) {
+  teamsArray[i].score = randomizer (0, 10);
+  teamsArray[i].fauls = randomizer (0, 10);
+}
+console.log(teamsArray);
+var teamsNewArray = [];
+for (i = 0; i < teamsArray.length; i++ ) {
+  var obj = {
+    name: teamsArray[i].name,
+    fauls: teamsArray[i].fauls
+  };
+  teamsNewArray.push(obj);
+}
+console.log(teamsNewArray);
+// Function - randomizer
+function randomizer (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-
-
-/* Cambio i valori */
-for (var i = 0; i < arraySquadre.length; i++) {
-
-  arraySquadre[i].puntiFatti = randomizzatore (0, 10);
-  arraySquadre[i].falliSubiti = randomizzatore (0, 10);
-
-}
-
-
-console.log(arraySquadre);
-
-
-/* 3 step: Infine creiamo un nuovo array
-i cui elementi contengono solo nomi e falli
-subiti e stampiamo tutto in console */
-
-var nuovoArray = [];
-
-for (i = 0; i < arraySquadre.length; i++ ) {
-
-  var obj = {
-
-    nome: arraySquadre[i].nome,
-    falliSubiti: arraySquadre[i].falliSubiti
-
-  };
-
-  nuovoArray.push(obj);
-
-}
-
-console.log(nuovoArray);
